@@ -18,9 +18,6 @@ let countU = 0;
 let countPlayer = document.querySelector('.count_player');
 let countO = 0;
 let countOpponent = document.querySelector('.count_opponent');
-let restart = document.querySelector('.restart');
-
-//restart.onclick = window.location.reload();
 
 ///////  Камень //////////
 document.querySelector('#stone').addEventListener('click', function () {
