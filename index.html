@@ -10,32 +10,43 @@
 </head>
 
 <body>
-
+<main>
     <header>
-<p>Выберите камень или ножницы или бумага. Соперник сделает это сам</p>
-<p>Камень ломает ножницы и побеждает, но его можно обергуть бумагой</p>
-<p>Ножницы режут бумагу и побеждают, но они ломаются об камень</p>
-<p>Бумага оборачивает камень и выигрывает, но ее режут ножницы</p>
+        <p>Выберите камень или ножницы или бумага. Соперник сделает это сам.</p>
+        <p>Камень ломает ножницы и побеждает, но его можно обергуть бумагой.</p>
+        <p>Ножницы режут бумагу и побеждают, но они ломаются об камень. </p>
+        <p>Бумага оборачивает камень и выигрывает, но ее режут ножницы.</p>
     </header>
 
     <section>
         <!-- here the Game -->
-<div id = 'player_div' class = 'info'></div>
-<div id = 'result_div' class = 'info'></div>
-<div id = 'opponent_div' class = 'info'></div>
-<div id = 'buttons' class = 'buttons'>
-    <button id = 'stone' class = 'button'>Камень</button>
-    <button id = 'clipper' class = 'button'>Ножницы</button>
-    <button id = 'paper' class = 'button'>Бумага</button>
-</div>
-
-
+        <div id = 'player_div' class = 'info'></div>
+        <div id = 'result_div' class = 'info'></div>
+        <div id = 'opponent_div' class = 'info'></div>
+        <div class="hands">
+            <div class="hand_div"></div>
+            <div class="result_div">
+                <div class="restart"><button id = 'restart'>RESTART</button></div>
+                <div class="result_text"></div>
+                <div class = 'smile'></div>
+                <div class = 'count'>Счет</div>
+                <div class = 'count_player'>0</div>
+                <div class = 'count_opponent'>0</div>
+            </div>
+            <div class="hand_divM " id='m'></div>
+        </div>
+        <div id='buttons' class='buttons'>
+            <button id='stone' class='button s'></button>
+            <button id='clipper' class='button c'></button>
+            <button id='paper' class='button p'></button>
+        </div>
     </section>
 
 
 
     <script src="scripts.js">
     </script>
+    </main>
 </body>
 
 </html>
