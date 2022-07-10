@@ -30,8 +30,23 @@ const langArr = {
     uk: "ПЕРЕЗАПУСК",
     pl: "PONOWNIE",
   },
+  win: {
+    en: "WINNER",
+    uk: "ПЕРЕМОГА",
+    pl: "ZWYCIĘZCA",
+  },
+  los: {
+    en: "Friendship won",
+    uk: "Перемогла дружба",
+    pl: "Wygrała przyjaźń",
+  },
+  mis: {
+    en: "DEFEAT",
+    uk: "ПОРАЗКА",
+    pl: "POKONAĆ",
+  },
 };
-// .lang button
+
 document
   .querySelectorAll(".btn")
   .forEach((b) => b.addEventListener("click", setLang));

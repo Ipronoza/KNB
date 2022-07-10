@@ -108,15 +108,19 @@ function showResult() {
     resultText.innerHTML = " ";
     smileDiv.style.backgroundImage = "none";
   }, 0);
-
   setTimeout(function () {
+    resultText.classList.remove("lng-win", "lng-los", "lgn-mis");
+    resultText.classList.remove("lng-mis", "lng-win", "lgn-los");
+    resultText.classList.remove("lng-los", "lng-mis", "lgn-win");
     if (playerDiv.innerHTML == opponentDiv.innerHTML) {
+      resultText.classList.toggle("lng-los");
       resultText.innerHTML = "Перемогла дружба";
       smileDiv.style.backgroundImage = "url('images/ok_smile.png')";
     } else if (
       playerDiv.innerHTML == "Камень" &&
       opponentDiv.innerHTML == "Бумага"
     ) {
+      resultText.classList.toggle("lng-mis");
       resultText.innerHTML = "ПОРАЗКА";
       smileDiv.style.backgroundImage = "url('images/lose_smile.png')";
       countO++;
@@ -125,6 +129,7 @@ function showResult() {
       playerDiv.innerHTML == "Ножницы" &&
       opponentDiv.innerHTML == "Камень"
     ) {
+      resultText.classList.toggle("lng-mis");
       resultText.innerHTML = "ПОРАЗКА";
       smileDiv.style.backgroundImage = "url('images/lose_smile.png')";
       countO++;
@@ -133,6 +138,7 @@ function showResult() {
       playerDiv.innerHTML == "Бумага" &&
       opponentDiv.innerHTML == "Ножницы"
     ) {
+      resultText.classList.toggle("lng-mis");
       resultText.innerHTML = "ПОРАЗКА";
       smileDiv.style.backgroundImage = "url('images/lose_smile.png')";
       countO++;
@@ -141,6 +147,7 @@ function showResult() {
       playerDiv.innerHTML == "Камень" &&
       opponentDiv.innerHTML == "Ножницы"
     ) {
+      resultText.classList.toggle("lng-win");
       resultText.innerHTML = "ПЕРЕМОГА!";
       smileDiv.style.backgroundImage = "url('images/win_smile.png')";
       countU++;
@@ -149,6 +156,7 @@ function showResult() {
       playerDiv.innerHTML == "Ножницы" &&
       opponentDiv.innerHTML == "Бумага"
     ) {
+      resultText.classList.toggle("lng-win");
       resultText.innerHTML = "ПЕРЕМОГА!";
       smileDiv.style.backgroundImage = "url('images/win_smile.png')";
       countU++;
@@ -157,6 +165,7 @@ function showResult() {
       playerDiv.innerHTML == "Бумага" &&
       opponentDiv.innerHTML == "Камень"
     ) {
+      resultText.classList.toggle("lng-win");
       resultText.innerHTML = "ПЕРЕМОГА!";
       smileDiv.style.backgroundImage = "url('images/win_smile.png')";
       countU++;
